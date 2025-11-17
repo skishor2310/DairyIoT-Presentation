@@ -1,0 +1,413 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Industrial IoT Monitoring System</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <link rel='stylesheet'
+        href='https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <link rel="stylesheet" href="css/iot.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <span class="text-main fw-bold">Industrial IoT Monitoring System</span>
+                <div class="fs-80 text-light">Real-time monitoring and management platform</div>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div class="d-flex ms-auto" role="search">
+                    <img src="images/default-user.jpg" class="avatar">
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid px-0" id="main-content">
+        <div class="card card-body" id="banner-content">
+            <div class="row align-items-end">
+                <div class="col-sm-3">
+                    <div class="card mb-3 main-card">
+                        <div class="card-header">Energy</div>
+                        <div class="card-body">
+                            <div class="d-flex flex-column gap-3">
+                                <div class="card card-body bg-success bg-opacity-10">
+                                    <div class="d-flex">
+                                        <div class="flex-shrink-0">
+                                            <div class="icon-wrapper">
+                                                <i class="fi fi-rr-research-arrows-circle"></i>
+                                            </div>
+                                        </div>
+                                        <div class="flex-grow-1 ms-3">
+                                            <label for="" class="form-label">Active Energy Received</label>
+                                            <div class="data-text text-success">
+                                                120,500 Wh
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card card-body bg-primary bg-opacity-10">
+                                    <div class="d-flex">
+                                        <div class="flex-shrink-0">
+                                            <div class="icon-wrapper">
+                                                <i class="fi fi-rr-circle-water-plug"></i>
+                                            </div>
+                                        </div>
+                                        <div class="flex-grow-1 ms-3">
+                                            <label for="" class="form-label">Active Energy
+                                                Delivered</label>
+                                            <div class="data-text text-primary">
+                                                118,900 Wh
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card main-card">
+                        <div class="card-header">Harmonics</div>
+                        <div class="card-body">
+                            <div class="d-flex flex-column gap-3">
+                                <div>
+                                    <label for="" class="form-label">Voltage Harmonics (%)</label>
+                                    <div class="d-flex gap-2">
+                                        <div class="card card-body bg-danger bg-opacity-10 text-danger text-center">
+                                            <label for="" class="form-label">R</label>
+                                            <div class="data-text">2.7980%</div>
+                                        </div>
+                                        <div class="card card-body bg-warning bg-opacity-10 text-warning text-center">
+                                            <label for="" class="form-label">Y</label>
+                                            <div class="data-text">2.8010%</div>
+                                        </div>
+                                        <div class="card card-body bg-blue-subtle text-blue text-center">
+                                            <label for="" class="form-label">B</label>
+                                            <div class="data-text">2.8020%</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <label for="" class="form-label">Current Harmonics (%)</label>
+                                    <div class="d-flex gap-2">
+                                        <div class="card card-body bg-danger bg-opacity-10 text-danger text-center">
+                                            <label for="" class="form-label">R</label>
+                                            <div class="data-text">0.000%</div>
+                                        </div>
+                                        <div class="card card-body bg-warning bg-opacity-10 text-warning text-center">
+                                            <label for="" class="form-label">Y</label>
+                                            <div class="data-text">0.000%</div>
+                                        </div>
+                                        <div class="card card-body bg-blue-subtle text-blue text-center">
+                                            <label for="" class="form-label">B</label>
+                                            <div class="data-text">0.000%</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="card main-card">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="mb-3">
+                                    <label for="" class="form-label">Device :</label>
+                                    <div class="data-text text-white">TEST_DEV_STPL1</div>
+                                </div>
+                                <span class="badge bg-primary bg-opacity-10 text-primary fs-main">
+                                    <i class="fi fi-rr-heart-rate me-2"></i>NORMAL
+                                </span>
+                            </div>
+
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="d-flex gap-3 align-items-center">
+                                    <div class="d-flex text-white fs-75 align-items-center gap-2">
+                                        <i class="fi fi-rr-marker"></i>
+                                        Shaurya Technosoft, Pune
+                                    </div>
+                                    <div class="text-white">|</div>
+                                    <div class="d-flex text-white fs-75 align-items-center gap-2">
+                                        <i class="fi fi-rr-heart-rate"></i>
+                                        Slave ID: 1
+                                    </div>
+                                </div>
+                                <div class="d-flex text-secondary fs-75 align-items-center gap-2">
+                                    <i class="fi fi-rr-clock-five"></i>
+                                    13/11/2025, 4:51:30 PM
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="card mb-3 main-card">
+                        <div class="card-header">Tap Changer</div>
+                        <div class="card-body">
+                            <div class="d-flex flex-column gap-3">
+                                <div class="card card-body bg-teal-subtle text-teal ">
+                                    <div class="d-flex">
+                                        <div class="flex-shrink-0">
+                                            <div class="icon-wrapper">
+                                                <i class="fi fi-rr-qrcode-location"></i>
+                                            </div>
+                                        </div>
+                                        <div class="flex-grow-1 ms-3">
+                                            <label for="" class="form-label">Current Position</label>
+                                            <div class="data-text">
+                                                4
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card card-body bg-secondary bg-opacity-10 text-dark">
+                                    <div class="d-flex">
+                                        <div class="flex-shrink-0">
+                                            <div class="icon-wrapper">
+                                                <i class="fi fi-rr-settings"></i>
+                                            </div>
+                                        </div>
+                                        <div class="flex-grow-1 ms-3">
+                                            <label for="" class="form-label">Total Operations</label>
+                                            <div class="data-text text-pink">
+                                                1,545
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card main-card">
+                        <div class="card-header">Temperature & Oil</div>
+                        <div class="card-body">
+                            <div class="d-flex flex-column gap-3">
+                                <div class="card card-body bg-danger bg-opacity-10 text-danger">
+                                    <div class="d-flex">
+                                        <div class="flex-shrink-0">
+                                            <div class="icon-wrapper">
+                                                <i class="fi fi-rr-temperature-list"></i>
+                                            </div>
+                                        </div>
+                                        <div class="flex-grow-1 ms-3">
+                                            <label for="" class="form-label">Winding Temp</label>
+                                            <div class="data-text">
+                                                62.0°C
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card card-body bg-cyan-subtle text-cyan">
+                                    <div class="d-flex">
+                                        <div class="flex-shrink-0">
+                                            <div class="icon-wrapper">
+                                                <i class="fi fi-rr-blood"></i>
+                                            </div>
+                                        </div>
+                                        <div class="flex-grow-1 ms-3">
+                                            <label for="" class="form-label">Oil Temp</label>
+                                            <div class="data-text">
+                                                55.0°C
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card card-body bg-primary bg-opacity-10 text-primary">
+                                    <div class="d-flex">
+                                        <div class="flex-shrink-0">
+                                            <div class="icon-wrapper">
+                                                <i class="fi fi-rr-water-rise"></i>
+                                            </div>
+                                        </div>
+                                        <div class="flex-grow-1 ms-3">
+                                            <label for="" class="form-label">Oil Level</label>
+                                            <div class="d-flex gap-2 align-items-center">
+                                                <div class="data-text">
+                                                    78.0%
+                                                </div>
+                                                <div class="progress" role="progressbar" aria-valuenow="78"
+                                                    aria-valuemin="0" aria-valuemax="100"
+                                                    style="height: 5px; width: 100%;">
+                                                    <div class="progress-bar" style="width: 78%"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid mb-5" id="sub-content">
+        <div class="row g-3">
+            <div class="col-sm-4">
+                <div class="card content-card">
+                    <div class="card-header bg-primary"> <i class="fi fi-rr-bolt me-2"></i> Voltage Parameters</div>
+                    <div class="card-body">
+                        <div class="d-flex flex-column gap-3">
+                            <div>
+                                <div class="form-label">
+                                    Phase Voltages
+                                </div>
+                                <div class="row g-2">
+                                    <div class="col-4">
+                                        <div class="card card-body text-center bg-blue-subtle text-blue">
+                                            <div class="form-label">R Phase</div>
+                                            <div class="data-text">254.20 V</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="card card-body text-center bg-teal-subtle text-teal">
+                                            <div class="form-label">Y Phase</div>
+                                            <div class="data-text">253.80 V</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="card card-body text-center bg-purple-subtle text-purple">
+                                            <div class="form-label">B Phase</div>
+                                            <div class="data-text">254.10 V</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="form-label">
+                                    Line Voltages
+                                </div>
+                                <div class="row g-2">
+                                    <div class="col-4">
+                                        <div class="card card-body text-center bg-secondary bg-opacity-10 text-dark">
+                                            <div class="form-label">R Phase</div>
+                                            <div class="data-text">440.10 V</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="card card-body text-center bg-secondary bg-opacity-10 text-dark">
+                                            <div class="form-label">Y Phase</div>
+                                            <div class="data-text">439.90 V</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="card card-body text-center bg-secondary bg-opacity-10 text-dark">
+                                            <div class="form-label">B Phase</div>
+                                            <div class="data-text">440.30 V</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="card content-card">
+                    <div class="card-header bg-danger"><i class="fi fi-rr-heart-rate me-2"></i>Current & Load</div>
+                    <div class="card-body">
+                        <div class="form-label">
+                            Phase Currents
+                        </div>
+                        <div class="row g-3">
+                            <div class="col-4">
+                                <div class="card card-body text-center bg-blue-subtle text-blue">
+                                    <div class="form-label">R Phase</div>
+                                    <div class="data-text">236.00 A</div>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="card card-body text-center bg-teal-subtle text-teal">
+                                    <div class="form-label">Y Phase</div>
+                                    <div class="data-text">235.50 A</div>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="card card-body text-center bg-purple-subtle text-purple">
+                                    <div class="form-label">B Phase</div>
+                                    <div class="data-text">236.20 A</div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="card card-body bg-danger bg-opacity-10 text-danger">
+                                    <div class="form-label">Average Load</div>
+                                    <h5 class="mb-0">
+                                        <i class="fi fi-rr-arrow-trend-up me-2"></i>45.00%
+                                    </h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="card content-card">
+                    <div class="card-header bg-success"><i class="fi fi-rr-battery-full me-2"></i>Power Parameters</div>
+                    <div class="card-body">
+                        <div class="row g-3 mb-3">
+                            <div class="col-6">
+                                <div class="card card-body bg-success bg-opacity-10 text-success">
+                                    <div class="form-label">Total Real Power</div>
+                                    <div class="data-text">4530.00 kW</div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="card card-body bg-primary bg-opacity-10 text-primary">
+                                    <div class="form-label">Total Reactive</div>
+                                    <div class="data-text">4950.00 kVAR</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-label">Power Factor</div>
+                        <div class="row g-3">
+                            <div class="col-4">
+                                <div class="card card-body text-center bg-secondary bg-opacity-10 text-dark">
+                                    <div class="form-label">R</div>
+                                    <div class="data-text">0.9500</div>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="card card-body text-center bg-secondary bg-opacity-10 text-dark">
+                                    <div class="form-label">Y</div>
+                                    <div class="data-text">0.9500</div>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="card card-body text-center bg-secondary bg-opacity-10 text-dark">
+                                    <div class="form-label">B</div>
+                                    <div class="data-text">0.9500</div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="card card-body bg-purple-subtle text-purple">
+                                    <div class="form-label">Frequency</div>
+                                    <div class="data-text">50.00 Hz</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
