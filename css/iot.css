@@ -322,3 +322,16 @@ i {
     font-weight: 600;
     margin-bottom: 0px;
 }
+
+.form-container .form-label {
+    font-size: 0.8rem;
+    font-weight: 500;
+    margin-bottom: 1px;
+}
+
+.form-container .btn,
+.form-container .form-control,
+.form-container .form-select {
+    font-size: 0.85rem;
+    box-shadow: none;
+}
