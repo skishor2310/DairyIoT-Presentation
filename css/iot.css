@@ -8,9 +8,53 @@ body {
 
 :root {
     --default-font: 'Inter', sans-serif;
-    --main-color: #ea3507;
-    --main-dark-color: #bb2a05;
-    --main-light-color: #fceae6;
+    --main-color: rgb(30, 148, 164);
+    --main-dark-color: rgb(11, 121, 137);
+    --main-light-color: rgb(232, 244, 245);
+}
+
+.wrapper {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper .sidebar {
+    width: 60px;
+    height: 100%;
+    background-color: var(--main-color);
+}
+
+.wrapper .sidebar .menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    margin-top: 1rem;
+}
+
+.wrapper .sidebar .menu li a {
+    color: #fff;
+    text-decoration: none;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    padding: 10px;
+    text-align: center;
+    border-radius: 0.375rem;
+}
+
+.wrapper .sidebar .menu li a:hover {
+    background-color: var(--main-dark-color);
+}
+
+.wrapper .data-container {
+    flex: 1;
+    height: 100%;
 }
 
 i {
@@ -186,32 +230,29 @@ i {
 }
 
 #main-content {
-    margin-top: 75px;
     margin-bottom: 15px;
 }
 
-#banner-content {
-    border: 0;
-    background: url('../images/bg.jpg');
-    background-size: cover;
-    background-position: bottom;
-    border-radius: 0;
-}
-
 #banner-content .card.main-card {
-    backdrop-filter: blur(25px) saturate(200%);
-    -webkit-backdrop-filter: blur(25px) saturate(200%);
-    background-color: rgba(0, 0, 0, 0.25);
     border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.125);
+    border: 0;
 }
 
 #banner-content .card.main-card .card-header {
-    background-color: transparent;
     border-bottom: none;
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-weight: 600;
+    border-radius: 15px 15px 0 0;
+    padding-block: 10px;
     color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+#banner-content .card.main-card .card-header i {
+    line-height: 1;
+    font-size: 1.2rem;
 }
 
 #banner-content .card.main-card .icon-wrapper {
@@ -223,7 +264,7 @@ i {
     align-items: center;
     justify-content: center;
     font-size: 1.1rem;
-    color: #fff;
+    color: var(--main-color);
     line-height: 1;
 }
 
@@ -234,49 +275,49 @@ i {
 }
 
 #banner-content .card.main-card .form-label {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     margin-bottom: 03px;
-    color: #aaa;
+    color: #151515;
 }
 
 #banner-content .card.main-card .data-text {
-    font-size: 0.9rem;
+    font-size: 1.25rem;
     font-weight: 700;
     margin: 0;
 }
 
-#sub-content .content-card {
+.sub-content .content-card {
     border-radius: 15px;
     border: 0;
 }
 
-#sub-content .content-card .card {
+.sub-content .content-card .card {
     border: 0;
     border-radius: 15px;
 }
 
-#sub-content .content-card .card-header {
+.sub-content .content-card .card-header {
     border-bottom: none;
     font-size: 0.9rem;
     font-weight: 600;
     border-radius: 15px 15px 0 0;
-    padding-block: 15px;
+    padding-block: 10px;
     color: #fff;
     display: flex;
     align-items: center;
 }
 
-#sub-content .content-card .card-header i {
+.sub-content .content-card .card-header i {
     line-height: 1;
     font-size: 1.2rem;
 }
 
-#sub-content .content-card .form-label {
+.sub-content .content-card .form-label {
     font-size: 0.75rem;
     margin-bottom: 3px;
 }
 
-#sub-content .content-card .data-text {
+.sub-content .content-card .data-text {
     font-size: 0.95rem;
     font-weight: 600;
     margin-bottom: 0px;
